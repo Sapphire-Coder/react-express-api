@@ -20,8 +20,8 @@ export default function Show() {
     return (
         <div>
             <h2>{data.description}</h2>
-            <button onClick = {delTodo}>Delete</button>
-            <Link to = {`/${id}/edit`}>Edit</Link>
+            <button onClick = {delTodo}>Delete</button> <br/>
+            <button onClick={() => navigate(`/${id}/edit`)}>Edit</button>
         </div>
     )
 }

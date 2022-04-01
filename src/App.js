@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <nav>
         <Link to = '/'>Home </Link>
-        <Link to = '/new'>New Todo</Link>
+        <Link to = '/new'>New</Link>
       </nav>
       <Routes>
         <Route path = '/' element = {<Home />} />

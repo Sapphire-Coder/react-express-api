@@ -14,7 +14,7 @@ export default function Edit() {
 
     const updTodo = e => {
         e.preventDefault()
-        const todo = {description: e.target.description.value, complete: false}
+        const todo = {description: e.target.description.value, complete: e.target.complete.checked}
         updateTodo(id, todo)
         navigate(`/${id}`)
     }
@@ -23,6 +23,7 @@ export default function Edit() {
         <div>
             <form onSubmit = {updTodo}>
                 <input type = 'text' name = 'description' defaultValue = {data.description} />
+                <input type = 'checkbox' name = 'complete' defaultChecked = {data.complete} />
                 <input type = 'submit' />
             </form>
         </div>
