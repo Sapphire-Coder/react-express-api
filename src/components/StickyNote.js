@@ -1,7 +1,16 @@
 export default function StickyNote(props) {
+
+    const { todo } = props
+
     return (
-        <div>
-            <a href = {`/${props.id}`}><h2>{props.description}</h2></a>
-        </div>
+        todo.complete == true ? (
+            <div>
+                <h2><a href = {`/${todo.id}`} className = 'completed'>{todo.description}</a></h2>
+            </div>
+        ) : (
+            <div>
+                <h2><a href = {`/${todo.id}`} className = 'notCompleted'>{todo.description}</a></h2>
+            </div>
+        )
     )
 }

@@ -14,11 +14,11 @@ export default function Home() {
     return (
         <div>
             <h1>To Do List</h1>
-            <div>
+            <div id = 'container'>
             {
                 data.map((e, i) => {
                     return (
-                        <StickyNote description = {e.description} id = {e._id} key = {i} />
+                        <StickyNote todo = {e} key = {i}/>
                     )
                 })
             }
